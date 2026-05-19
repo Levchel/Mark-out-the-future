@@ -22,6 +22,11 @@
                 <a href="#benefits" class="nav-link">Условия</a>
                 <a href="#apply" class="btn btn-yellow">Оставить заявку</a>
             </nav>
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -61,19 +66,17 @@
                     </div>
                     <div class="bento-item item-medium b-box decor-block">
                         <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
-                        <div class="decor-content">
-                            <div class="scan-line"></div>
-                            <div class="ai-viz">
-                                <div class="target-circle"></div>
-                                <div class="data-bars">
-                                    <div class="bar" style="animation-delay: 0s"></div>
-                                    <div class="bar" style="animation-delay: 0.2s"></div>
-                                    <div class="bar" style="animation-delay: 0.4s"></div>
-                                    <div class="bar" style="animation-delay: 0.1s"></div>
-                                    <div class="bar" style="animation-delay: 0.3s"></div>
+                        <div class="ai-scanner">
+                            <div class="scanner-line"></div>
+                            <div class="scanner-grid"></div>
+                            <div class="scanner-content">
+                                <div class="target-box"></div>
+                                <div class="scanner-text">
+                                    <span class="status-dot"></span>
+                                    <span class="text-cmd">AI_TARGET_ACQUIRED</span>
+                                    <span class="text-data">// STREAMING_DATA...</span>
                                 </div>
                             </div>
-                            <div class="status-feed">AI_TARGET_ACQUIRED // STREAMING_DATA...</div>
                         </div>
                     </div>
                 </div>
@@ -89,24 +92,22 @@
         <section class="bento-section" id="benefits">
             <div class="container">
                 <div class="bento-grid">
-                    <!-- Карьерный рост -->
                     <div class="bento-item item-full b-box accent-blue">
                         <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
                         <h3>Карьерный рост</h3>
                         <div class="career-content">
                             <p>Твой путь не ограничивается простой разметкой. Мы ценим экспертизу и предлагаем прозрачную вертикаль развития внутри Центра ИИ:</p>
                             <ul class="career-path">
-                                <li><span>РАЗМЕТЧИК ДАННЫХ</span></li>
+                                <li><span>МЛАДШИЙ РАЗМЕТЧИК ДАННЫХ</span></li>
+                                <li class="path-arrow">→</li>
+                                <li><span>МИДЛ-РАЗМЕТЧИК</span></li>
                                 <li class="path-arrow">→</li>
                                 <li><span>СЕНЬОР-РАЗМЕТЧИК</span></li>
-                                <li class="path-arrow">→</li>
-                                <li><span>ГЛАВНЫЙ РАЗМЕТЧИК (TEAM LEAD)</span></li>
                             </ul>
-                            <p>Главный бонус — это возможность увидеть финальный результат: как твоя работа превращается в «зрение» для беспилотников и роботов. Лучшие специалисты получают приглашение в инженерный департамент разработки алгоритмов Computer Vision.</p>
+                            <p>Главный бонус — это возможность увидеть финальный результат: как твоя работа превращается в «зрение» для беспилотников и роботов.</p>
                         </div>
                     </div>
 
-                    <!-- Условия -->
                     <div class="bento-item item-small b-box">
                         <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
                         <h3>График</h3>
@@ -132,59 +133,6 @@
             </div>
         </section>
     </main>
-
-    <div id="apply-modal" class="modal-overlay hidden">
-        <div class="glass-form-container b-box modal-content">
-            <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
-            <button class="close-modal">&times;</button>
-            <h2>СТАТЬ РАЗМЕТЧИКОМ</h2>
-            <form class="apply-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="ФИО" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Студенческая почта (@student.bmstu.ru)" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="tel" id="phone" placeholder="Номер телефона" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="telegram" placeholder="Telegram (@username)" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" id="faculty" placeholder="Факультет (ИУ, РЛ, БМТ...)" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="specialization" placeholder="Направление обучения" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" id="group" placeholder="Учебная группа" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" id="course" placeholder="Курс" min="1" max="6" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <textarea id="objects" placeholder="Какие объекты тебе интересно размечать? (например: здания, дороги, транспорт, растительность)" required></textarea>
-                </div>
-                <div class="form-group">
-                    <textarea id="goals" placeholder="Какие цели ставишь перед собой на этой работе?" required></textarea>
-                </div>
-                <div class="form-group">
-                    <textarea id="motivation" placeholder="Почему хочешь работать именно у нас? Твои ожидания и желание развиваться." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-yellow btn-full">ОТПРАВИТЬ ДАННЫЕ</button>
-                <p class="form-note">* Все кандидаты проходят предварительное собеседование.</p>
-            </form>
-        </div>
-    </div>
 
     <footer>
         <div class="container">
