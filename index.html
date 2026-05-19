@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разметка карт — МГТУ им. Н.Э. Баумана</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div id="custom-cursor"></div>
+    <div class="grid-overlay"></div>
+
+    <header class="glass-header">
+        <div class="container">
+            <div class="logo">
+                <img src="Logo_White_No-BG.svg" alt="МГТУ им. Н.Э. Баумана" class="mstu-logo">
+                <span class="logo-divider"></span>
+                <span class="logo-text">DATA LABELING UNIT</span>
+            </div>
+            <nav>
+                <a href="#about" class="nav-link">О проекте</a>
+                <a href="#benefits" class="nav-link">Условия</a>
+                <a href="#apply" class="btn btn-yellow">Оставить заявку</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <canvas id="map-canvas"></canvas>
+            <div class="container hero-content">
+                <div class="coordinate-tracker">
+                    <span class="label">COORD_X:</span> <span id="coord-x">0.0000</span><br>
+                    <span class="label">COORD_Y:</span> <span id="coord-y">0.0000</span>
+                </div>
+                <h1 class="glitch-text" data-text="РАЗМЕЧАЙ БУДУЩЕЕ">РАЗМЕЧАЙ БУДУЩЕЕ</h1>
+                <p class="hero-subtitle">Стань частью команды разработки AI-картографии в главном техническом вузе страны.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-blue btn-large open-modal">ПРИСОЕДИНИТЬСЯ</button>
+                </div>
+            </div>
+            <div class="hero-labels">
+                <div class="label-item">CLASS: BUILDING</div>
+                <div class="label-item">CONFIDENCE: 99.8%</div>
+                <div class="label-item">LAYER: INFRASTRUCTURE</div>
+            </div>
+        </section>
+
+        <section class="bento-section" id="about">
+            <div class="container">
+                <div class="bento-grid">
+                    <div class="bento-item item-large b-box">
+                        <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
+                        <h3>Интерпретация данных</h3>
+                        <p>Обучай нейросети видеть мир, переводя визуальные образы на язык алгоритмов. Твоя точность — фундамент для развития глобального ИИ.</p>
+                    </div>
+                    <div class="bento-item item-medium b-box accent-yellow">
+                        <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
+                        <h3>Комьюнити</h3>
+                        <p>Работа в среде инженеров и разработчиков. Погружение в реальные пайплайны Computer Vision.</p>
+                    </div>
+                    <div class="bento-item item-medium b-box decor-block">
+                        <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
+                        <div class="decor-content">
+                            <div class="scan-line"></div>
+                            <div class="ai-viz">
+                                <div class="target-circle"></div>
+                                <div class="data-bars">
+                                    <div class="bar" style="animation-delay: 0s"></div>
+                                    <div class="bar" style="animation-delay: 0.2s"></div>
+                                    <div class="bar" style="animation-delay: 0.4s"></div>
+                                    <div class="bar" style="animation-delay: 0.1s"></div>
+                                    <div class="bar" style="animation-delay: 0.3s"></div>
+                                </div>
+                            </div>
+                            <div class="status-feed">AI_TARGET_ACQUIRED // STREAMING_DATA...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-tag">DATA_SEGMENT_02 // SYSTEM_SCAN</div>
+            <div class="divider-line"></div>
+        </div>
+
+        <section class="bento-section" id="benefits">
+            <div class="container">
+                <div class="bento-grid">
+                    <!-- Карьерный рост -->
+                    <div class="bento-item item-full b-box accent-blue">
+                        <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
+                        <h3>Карьерный рост</h3>
+                        <div class="career-content">
+                            <p>Твой путь не ограничивается простой разметкой. Мы ценим экспертизу и предлагаем прозрачную вертикаль развития внутри Центра ИИ:</p>
+                            <ul class="career-path">
+                                <li><span>РАЗМЕТЧИК ДАННЫХ</span></li>
+                                <li class="path-arrow">→</li>
+                                <li><span>СЕНЬОР-РАЗМЕТЧИК</span></li>
+                                <li class="path-arrow">→</li>
+                                <li><span>ГЛАВНЫЙ РАЗМЕТЧИК (TEAM LEAD)</span></li>
+                            </ul>
+                            <p>Главный бонус — это возможность увидеть финальный результат: как твоя работа превращается в «зрение» для беспилотников и роботов. Лучшие специалисты получают приглашение в инженерный департамент разработки алгоритмов Computer Vision.</p>
+                        </div>
+                    </div>
+
+                    <!-- Условия -->
+                    <div class="bento-item item-small b-box">
+                        <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
+                        <h3>График</h3>
+                        <p>Гибкие смены, которые легко совмещать с учебой в Бауманке.</p>
+                    </div>
+                    <div class="bento-item item-small b-box accent-blue">
+                        <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
+                        <h3>Локация</h3>
+                        <p>Офис в 5-ти минутах от главного здания.</p>
+                    </div>
+                    <div class="bento-item item-medium b-box">
+                        <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
+                        <h3>Оплата</h3>
+                        <p>Стабильный доход и прозрачная система вознаграждения. Высокая точность разметки поощряется бонусами, позволяя тебе напрямую влиять на уровень своего заработка.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section" id="apply">
+            <div class="container" style="display: flex; justify-content: center;">
+                <button class="btn btn-blue btn-large open-modal" style="font-size: 1.5rem; padding: 25px 60px; box-shadow: 0 0 25px rgba(0, 108, 220, 0.3);">СТАТЬ РАЗМЕТЧИКОМ</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="apply-modal" class="modal-overlay hidden">
+        <div class="glass-form-container b-box modal-content">
+            <div class="node tl"></div><div class="node tr"></div><div class="node bl"></div><div class="node br"></div>
+            <button class="close-modal">&times;</button>
+            <h2>СТАТЬ РАЗМЕТЧИКОМ</h2>
+            <form class="apply-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="ФИО" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Студенческая почта (@student.bmstu.ru)" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Номер телефона" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="telegram" placeholder="Telegram (@username)" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="faculty" placeholder="Факультет (ИУ, РЛ, БМТ...)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="specialization" placeholder="Направление обучения" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="group" placeholder="Учебная группа" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="course" placeholder="Курс" min="1" max="6" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea id="objects" placeholder="Какие объекты тебе интересно размечать? (например: здания, дороги, транспорт, растительность)" required></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea id="goals" placeholder="Какие цели ставишь перед собой на этой работе?" required></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea id="motivation" placeholder="Почему хочешь работать именно у нас? Твои ожидания и желание развиваться." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-yellow btn-full">ОТПРАВИТЬ ДАННЫЕ</button>
+                <p class="form-note">* Все кандидаты проходят предварительное собеседование.</p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-copyright">
+                <img src="Logo_White_No-BG.svg" alt="МГТУ им. Н.Э. Баумана" class="footer-mini-logo">
+                <p>© 2026 МГТУ им. Н.Э. Баумана | Центр Искусственного Интеллекта</p>
+            </div>
+            <div class="footer-status">SYSTEM STATUS: <span class="online">ONLINE</span></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
